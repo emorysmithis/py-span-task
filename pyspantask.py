@@ -385,41 +385,21 @@ def request_subject_id():
   Prompt the user to enter a subject ID and check if the input
   conforms with the required format.  If not ask again.
   """
-
-  def center_window(size, window):
-    window_width = size[
-      0]  # Fetches the width you gave as arg. Alternatively window.winfo_width can be used if width is not to be fixed by you.
-    window_height = size[
-      1]  # Fetches the height you gave as arg. Alternatively window.winfo_height can be used if height is not to be fixed by you.
-    window_x = int(
-      (window.winfo_screenwidth() / 2) - (window_width / 2))  # Calculates the x for the window to be in the centre
-    window_y = int(
-      (window.winfo_screenheight() / 2) - (window_height / 2))  # Calculates the y for the window to be in the centre
-
-    window_geometry = str(window_width) + 'x' + str(window_height) + '+' + str(window_x) + '+' + str(
-      window_y)  # Creates a geometric string argument
-    window.geometry(window_geometry)  # Sets the geometry accordingly.
-    return
-
-  window = tkinter.Tk()
-  window.title('Subjetct ID')
-  label = tkinter.Label(window, text="Please enter a subject id consisting of numbers letters:")
-
+  root = tkinter.Tk()
+  root.attributes('-fullscreen', True)
+  root.title('Subject ID')
+  frame1 = tkinter.Frame(width=600, height=200)
+  frame2 = tkinter.Frame()
+  frame1.pack(side="top")
+  frame2.pack(expand=True)
+  label = tkinter.Label(frame2, text="Please enter a subject id consisting of numbers letters:").pack()
   sid_var = tkinter.StringVar()
-
-  entry = tkinter.Entry(window, textvariable=sid_var)
-
-  button = tkinter.Button(window, text="Confirm", command=window.destroy)
-
-  label.pack()
-  entry.pack()
-  button.pack()
-
-  center_window((500, 100), window)
-
+  entry = tkinter.Entry(frame2, textvariable=sid_var).pack()
+  button = tkinter.Button(frame2, text="Confirm", command=root.destroy).pack()
+  # Make it cover the entire screen:
+  w, h = root.winfo_screenwidth(), root.winfo_screenheight()
+  root.geometry("%dx%d+0+0" % (w, h))
   tkinter.mainloop()
-
-
   sid = sid_var.get()
   mo = re.match('[a-zA-Z0-9]+', sid)
   if mo and mo.group() == sid:
