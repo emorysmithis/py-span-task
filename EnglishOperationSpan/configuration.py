@@ -19,17 +19,17 @@ responses = {
 }
 
 # NUMBER OF ITEMS FOR PROCESSING TRIALS. DON'T SET THIS NUMBER TOO LOW! 15
-practice_processing_items = 12
+practice_processing_items = 15
 
 # NUMBER OF ITEMS FOR PRACTIVE TRIALS. THESE CAN BE FEW. 3,4
 practice_levels = (2,3)
 practice_items_per_level = 2
 
 # MEMORY LEVELS IN ACTUAL TEST, ORDER DOESN'T MATTER 2,3,4,5,6,7
-levels = (2,3,4,5)
+levels = (3,4,5,6,7)
 
 # NUMBER OF SETS PER SIZE. WE RECOMMEND 3.
-items_per_level = 3
+items_per_level = 2
 
 # TIME-OUT FACTOR: MEAN RT PLUS HOW MANY STANDARD DEVIATIONS?
 time_out_factor = 2.5
