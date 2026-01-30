@@ -74,7 +74,9 @@ instructions1 = """
 In the following task you will need to do two things: check the validity of math equations and memorize the letters that appear after each item.
 Read each math fact aloud as soon as you can. Press the C key if the equation is correct, or press the I key if the equation is incorrect.
 
-After each equation a letter that we want you to memorize will appear. Please read the letter aloud and memorize it . After a certain number of items, a question mark will appear on the screen. At that point you will need to type in the list of letters in the order that you read them. For example 'h w k j'.
+After each equation a letter that we want you to memorize will appear. Please read the letter aloud and memorize it. After a certain number of items, a question mark will appear on the screen. At that point you will need to type in the list of letters in the order that you read them. For example 'h w k j'.
+
+After the question mark appears and you have entered the set of letters, you can forget those letters and get ready for the next set of equations and letters.
 
 Before the experiment starts, you will be doing some practice problems. During the practice problems, you will be told if you answered accurately or not. In the real experiment, there will be no feedback. Please work as quickly and as accurately as possible. Please only take breaks when directed to do so.
 
